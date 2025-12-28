@@ -136,10 +136,39 @@ header {
     align-items: center;
     justify-content: center;
     gap: 18px;
-    background: #232323;
     text-align: center;
     color: #ffffff;
+    background: #232323;
+    position: relative;
+    overflow: hidden;
 }
+
+.presentacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 70%, white, transparent),
+    radial-gradient(1px 1px at 10% 80%, white, transparent),
+    radial-gradient(1px 1px at 90% 20%, white, transparent);
+  background-size: 200px 200px;
+  animation: moverEstrellas 20s linear infinite;
+  pointer-events: none; 
+}
+
+
+@keyframes moverEstrellas {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(500px);
+  }
+}
+
+
 
 
 .boton-cv button {
@@ -484,7 +513,7 @@ header {
     font-weight: 600;
 }
 
-/* LINKS */
+
 .datos-contacto a {
     color: #1f6feb;
     text-decoration: none;
@@ -501,7 +530,7 @@ html {
 }
 
 
-/* RESPONSIVE */
+
 @media (max-width: 700px) {
     .contacto-andres {
         grid-template-columns: 1fr;
