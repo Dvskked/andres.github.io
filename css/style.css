@@ -315,8 +315,8 @@ header {
 
 .proyecto-lego img{
     margin: 10px;
-    height: 500px;
-    width: 70%;
+    height: auto;
+    width: 100%;
 }
 
 
@@ -336,6 +336,36 @@ header {
     height: 500px;
     width: 100%;
 }
+
+
+
+.proyecto-bandidas{
+    margin-top: 70px;
+    background: #181818;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.proyecto-bandidas img{
+    margin: 10px;
+    height: 500px;
+    width: 100%;
+}
+
+
+.proyecto-libros{
+    margin-top: 70px;
+    background: #181818;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.proyecto-libros img{
+    margin: 10px;
+    height: 500px;
+    width: 100%;
+}
+
 
 
 
