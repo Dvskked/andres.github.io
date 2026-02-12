@@ -8,6 +8,15 @@
     font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section, 
+div[id] {
+    scroll-margin-top: 90px; 
+}
+
 body {
     background: #0b0d17;
     color: #eaeaea;
@@ -227,12 +236,76 @@ header {
 /* =========================
    ESTUDIOS
 ========================= */
-.estudios h2 {
-    color: #667eea;
+/* =========================
+   ESTUDIOS (CARDS MODERNAS)
+========================= */
+.titulo-estudios {
+    text-align: center;
+    margin: 60px 0 40px;
 }
 
-.trabajo-formacion ul {
-    margin-left: 20px;
+.contenido-estudios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.estudio-card {
+    background: rgba(18, 22, 51, 0.6);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+}
+
+.estudio-card:hover {
+    transform: translateY(-10px);
+    border-color: #667eea;
+    background: rgba(18, 22, 51, 0.9);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-header h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.card-header h4 {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
 }
 
 /* =========================
@@ -266,36 +339,124 @@ header {
     cursor: pointer;
 }
 
-/* =========================
-   CONTACTO
-========================= */
+/* --- CENTRADO DE CONTACTO --- */
+.contacto-centralizado {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    width: 100%;
+    margin: 40px auto;
+}
+
 .contacto-andres {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mantiene dos columnas en PC */
+    gap: 50px;
+    max-width: 1000px; /* Evita que se vea muy ancho */
+    width: 100%;
+    align-items: start;
+}
+
+.titulo-contacto {
+    text-align: center; /* Centra el título "Contacto" */
+    margin-bottom: 30px;
+}
+
+.datos-basicos-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ajuste del formulario para que no pierda su forma */
+.form-container {
+    background: #121633;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .contacto-andres {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        text-align: center; /* Centra el texto en móvil */
+        max-width: 500px;
+    }
+    
+    .datos-basicos-container {
+        text-align: center; /* Centra los datos en móvil */
+    }
+
+    .contacto-centralizado {
+        padding: 0 20px;
+    }
+}
+
+
+/* --- BARRAS DE HABILIDADES --- */
+.skills-section { width: 100%; max-width: 600px; margin: 20px auto; padding: 0 20px; }
+.skills-section h3 { text-align: center; margin-bottom: 20px; color: #667eea; }
+
+.skill-item { margin-bottom: 15px; }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
+
+.progress-bar { 
+    background: rgba(255, 255, 255, 0.1); 
+    height: 8px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.progress { 
+    background: linear-gradient(90deg, #667eea, #764ba2); 
+    height: 100%; 
+    width: 0; /* Empieza en 0 para la animación */
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.contacto-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    margin-top: 30px;
 }
 
-.contacto a {
-    color: #667eea;
-    text-decoration: none;
+.form-container { background: #121633; padding: 30px; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2); }
+
+.input-group { margin-bottom: 15px; }
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0b0d17;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+    outline: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-    .inicio,
-    .proyecto-php,
-    .proyecto-lego,
-    .proyecto-ws,
-    .proyecto-bandidas,
-    .proyecto-libros,
-    .contacto-andres {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+.input-group input:focus { border-color: #667eea; box-shadow: 0 0 5px rgba(102,126,234,0.5); }
 
-    .nav-header {
-        display: none;
-    }
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
+
+.btn-enviar:hover { background: #5a6fd6; transform: translateY(-2px); }
+
+.form-status { margin-top: 15px; text-align: center; padding: 10px; border-radius: 5px; }
+.form-status.success { background: rgba(40, 167, 69, 0.2); color: #28a745; border: 1px solid #28a745; }
+.hidden { display: none; }
+
