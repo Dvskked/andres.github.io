@@ -182,55 +182,216 @@ header {
 /* =========================
    INICIO / SOBRE MI
 ========================= */
-.inicio {
+/* =========================
+   SOBRE MÍ (DISEÑO INTEGRADO)
+========================= */
+.sobremi-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sobremi-card {
+    background: rgba(18, 22, 51, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.sobremi-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.sobremi-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr 2fr; /* Imagen pequeña, texto grande */
+    gap: 40px;
     align-items: center;
 }
 
-.descripcion-sobremi p {
-    color: #cfcfcf;
+/* Estilo de la Foto */
+.sobremi-foto {
+    display: flex;
+    justify-content: center;
 }
 
-.imagen-inicio img {
-    width: 300px;
-    margin: auto;
+.perfil-img {
+    width: 100%;
+    max-width: 280px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 2px solid #667eea;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
 }
+
+.perfil-img:hover {
+    transform: scale(1.03) rotate(-2deg);
+}
+
+/* Texto e Info */
+.sobremi-texto p {
+    color: #cfcfcf;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Estadísticas debajo del texto */
+.sobremi-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.stat-num {
+    display: block;
+    color: #667eea;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.stat-desc {
+    color: #b5b5b5;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 850px) {
+    .sobremi-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .sobremi-foto {
+        order: -1; /* La foto siempre arriba en móvil */
+    }
+    
+    .perfil-img {
+        max-width: 200px;
+    }
+    
+    .sobremi-stats {
+        justify-content: center;
+    }
+}
+
+
 
 /* =========================
    PROYECTOS
 ========================= */
-.proyecto-php,
-.proyecto-lego,
-.proyecto-ws,
-.proyecto-bandidas,
-.proyecto-libros {
+/* =========================
+   PROYECTOS (ESTILO TARJETAS)
+========================= */
+.contenedor-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Espacio entre proyectos */
+    padding: 50px 0;
+}
+
+.proyecto-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin: 80px 0;
+    gap: 50px;
     align-items: center;
+    background: rgba(18, 22, 51, 0.4);
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: 0.4s;
+}
+
+/* Efecto Zig-Zag: Invierte el orden en los proyectos pares */
+.proyecto-item:nth-child(even) {
+    direction: rtl; /* Cambia dirección del grid */
+}
+
+.proyecto-item:nth-child(even) .proyecto-texto {
+    direction: ltr; /* Mantiene el texto de izquierda a derecha */
+}
+
+.proyecto-item:hover {
+    background: rgba(18, 22, 51, 0.7);
+    border-color: rgba(102, 126, 234, 0.4);
+    transform: scale(1.02);
+}
+
+.tag {
+    color: #667eea;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .tproyecto {
-    color: #667eea;
+    font-size: 1.8rem;
+    margin: 10px 0 20px;
+    color: #fff;
 }
 
 .pproyecto {
-    color: #cfcfcf;
+    color: #b5b5b5;
+    line-height: 1.8;
 }
 
-.imagen-proyecto {
+.tech-stack {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tech-stack span {
+    background: #0b0d17;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.img-fluida {
+    width: 100%;
     border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    transition: transform 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.4s;
 }
 
-.imagen-proyecto:hover {
-    transform: scale(1.05);
+.proyecto-item:hover .img-fluida {
+    transform: rotate(2deg); /* Un pequeño giro al pasar el mouse */
+}
+
+.btn-proyecto {
+    display: inline-block;
+    margin-top: 25px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-proyecto:hover {
+    border-color: #667eea;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .proyecto-item, .proyecto-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        padding: 20px;
+    }
 }
 
 /* =========================
