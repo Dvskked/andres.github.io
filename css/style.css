@@ -301,7 +301,7 @@ header {
 }
 
 .fotoperfil-header img.andres:hover {
-  transform: scale(1.08) rotate(-3deg);
+  transform: scale(1.5) rotate(-3deg);
   box-shadow: var(--sombra-glow-hover);
 }
 
@@ -1476,6 +1476,29 @@ hr {
 }
 
 .hidden { display: none; }
+
+
+.imagen-estudio{
+  margin: 30px;
+}
+
+#soft{
+  height: 150px;
+  width: auto;
+  border-radius: 10px;
+}
+
+
+#soft:hover{
+  transform: translateY(-8px);
+  border-color: var(--color-borde-hover);
+  box-shadow: var(--sombra-media), var(--sombra-glow);
+}
+
+#soft:hover::before {
+  opacity: 1;
+}
+
 
 /* ================================================
    RESPONSIVE (CSS Unidades: breakpoints em)
