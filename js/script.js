@@ -1,7 +1,7 @@
 document.getElementById("btn-cv").addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = "cv/Andres_Forero_CV.docx";
-    link.download = "Andres_Forero_CV.docx";
+    link.href = "cv/Andres_Forero_CV2026.pdf";
+    link.download = "Andres_Forero_CV2026.pdf";
     link.click();
 });
 
