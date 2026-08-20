@@ -1,476 +1,599 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Mi portafolio personal como Desarrollador de software">
-        <meta name="keywords" content="html, css, js">
-        <meta name="author" content="Andres Forero">
-        <title>Portafolio - Andres Forero</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-    </head>
-    <body>
-        <div class="header">
-            <header>
-                <div class="andres-header"> <!-- aqui inicia mi header -->
-                    <div class="fotoperfil-header"> <!-- Foto de perfil -->
-                        <img src="img/wapo.jpeg" alt="foto perfil andres" class="andres">
-                    </div>
-                    <div class="informacionbasic-header"> <!-- Descripcion basica -->
-                        <h5 class="neon-text">Andres Forero</h5>
-                        <h6>Software Developer</h6>
-                    </div>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Andres Felipe Forero Sanchez - Desarrollador de Software en formacion | SENA Bucaramanga">
+  <meta name="keywords" content="desarrollador web, portafolio, Andres Forero, Full Stack, SENA, Bucaramanga, JavaScript, PHP, Python">
+  <meta name="author" content="Andres Felipe Forero Sanchez">
+  <meta name="theme-color" content="#070912">
+  <title>Andres Forero | Desarrollador de Software</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+</head>
+<body>
 
-                <!-- menu de navegacion -->
-                <div class="nav-header">
-                    <nav>
-                        <a href="#inicio"> <!-- Inicio -->
-                            <span>Inicio</span>
-                        </a>
-                    </nav>
-                    <nav>
-                        <a href="#proyectos"> <!-- Poyectos -->
-                            <span>Proyectos</span>
-                        </a>
-                    </nav>
-                   <nav>
-                        <a href="#estudios"> <!-- Estudios -->
-                            <span>Estudios</span> 
-                        </a>
-                    </nav>
-                    <nav>
-                        <a href="#logros"> <!-- Logros -->
-                            <span>Logros</span>
-                        </a>
-                    </nav>
-                    <nav>
-                        <a href="#contacto"> <!-- Contacto -->
-                            <span>Contacto</span>
-                        </a>
-                    </nav>
-                </div>
-            </header>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#hero" class="header__brand">
+        <img src="img/wapo.jpeg" alt="Andres Forero" class="header__foto">
+        <div class="header__info">
+          <span class="header__nombre">Andres Forero</span>
+          <span class="header__rol">Software Developer</span>
         </div>
-        <div class="presentacion"> <!-- Aqui inicia mi presentacion -->
-            <div class="boton-cv">
-                <button id="btn-cv">📁 Descargar CV</button> <!-- Boton para descargar mi CV -->
+      </a>
 
-            </div>
-            <div class="titulo-presentacion"> <!-- Titulo presentacion -->
-                <h1>Software Developer</h1>
-                <h2><strong>Andres Forero</strong></h2>
-            </div>
-            <div class="descripcion-presentacion"> <!-- Descripcion de mi presentacion -->
-                <span>Full Stack en formacion</span>
-            </div>
-            <div class="botonesenlace-presentacion"> <!-- Pagina de mi Github -->
-                <button onclick="github()">Github →</button>
-            </div>
-            <div class="iconos-lenguaje"> <!-- Iconos visibles de los lenguajes que predomino -->
-                <img src="img/html.png" alt="HTML">
-                <img src="img/css.png" alt="CSS">
-                <img src="img/js.png" alt="JS">
-                <img src="img/python.png" alt="PYTHON">
-                <img src="img/php.png" alt="PHP">
-                <img src="img/sql.png" alt="SQL">
-                <img src="img/github.png" alt="GITHUB">
-                <img src="img/csharp.png" alt="C#">
-            </div>
+      <nav class="header__nav" id="navMenu">
+        <a href="#hero" class="header__link active">Inicio</a>
+        <a href="#sobre-mi" class="header__link">Sobre mi</a>
+        <a href="#proyectos" class="header__link">Proyectos</a>
+        <a href="#estudios" class="header__link">Estudios</a>
+        <a href="#logros" class="header__link">Logros</a>
+        <a href="#skills" class="header__link">Skills</a>
+        <a href="#contacto" class="header__link">Contacto</a>
+      </nav>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu de navegacion">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="hero__content">
+      <span class="hero__badge anim-fade-up" data-delay="0">Disponible para colaborar</span>
+
+      <h1 class="hero__title anim-fade-up" data-delay="1">
+        <span class="hero__title-line">Construyo</span>
+        <span class="hero__title-gradient">experiencias digitales</span>
+      </h1>
+
+      <p class="hero__subtitle anim-fade-up" data-delay="2">
+        <span class="typing" id="typingText">Desarrollador de Software Full Stack en formacion</span>
+      </p>
+
+      <p class="hero__desc anim-fade-up" data-delay="3">
+        Aprendiz de Analisis y Desarrollo de Software en el SENA CSET de Bucaramanga.
+        Apasionado por crear soluciones web que combinan codigo limpio, diseno moderno y experiencia de usuario excepcional.
+      </p>
+
+      <div class="hero__actions anim-fade-up" data-delay="4">
+        <a href="#proyectos" class="btn btn--primary">
+          <span>Ver proyectos</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contacto" class="btn btn--outline">Contactarme</a>
+        <button id="btn-cv" class="btn btn--ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Descargar CV</span>
+        </button>
+      </div>
+
+      <div class="hero__tech anim-fade-up" data-delay="5">
+        <div class="hero__tech-track">
+          <div class="hero__tech-item"><img src="img/html.png" alt="HTML5"><span>HTML5</span></div>
+          <div class="hero__tech-item"><img src="img/css.png" alt="CSS3"><span>CSS3</span></div>
+          <div class="hero__tech-item"><img src="img/js.png" alt="JavaScript"><span>JavaScript</span></div>
+          <div class="hero__tech-item"><img src="img/python.png" alt="Python"><span>Python</span></div>
+          <div class="hero__tech-item"><img src="img/php.png" alt="PHP"><span>PHP</span></div>
+          <div class="hero__tech-item"><img src="img/sql.png" alt="MySQL"><span>MySQL</span></div>
+          <div class="hero__tech-item"><img src="img/github.png" alt="GitHub"><span>GitHub</span></div>
+          <div class="hero__tech-item"><img src="img/csharp.png" alt="C#"><span>C#</span></div>
         </div>
-        <div class="contenido"> <!-- Aqui inicia TODO el contenido -->
-            <div class="contenido-div">
-                <div class="inicio" id="inicio">
-                    <hr>
-                    <div class="titulo-seccion">
-                        <h1 class="fijo-nav">Inicio</h1>
-                    </div>
+      </div>
+    </div>
 
-                    <div class="sobremi-container">
-                        <div class="sobremi-card">
-                            <div class="sobremi-header">
-                                <span class="subtitulo">Introducción</span>
-                                <h2>Sobre mí</h2>
-                            </div>
-                            
-                            <div class="sobremi-grid">
-                                <div class="sobremi-foto">
-                                    <img src="img/perfil-andres.png" alt="Andrés Forero" class="perfil-img">
-                                </div>
+    <a href="#sobre-mi" class="hero__scroll" aria-label="Ir a siguiente seccion">
+      <div class="hero__scroll-mouse">
+        <div class="hero__scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
 
-                                <div class="sobremi-info">
-                                    <div class="sobremi-texto">
-                                        <p>Soy aprendiz de <strong>Análisis y Desarrollo de Software en el SENA CSET de Bucaramanga</strong>, con un fuerte enfoque en el <strong>desarrollo web</strong>. Mi pasión radica en construir interfaces que no solo sean visualmente atractivas, sino funcionales y bien estructuradas.</p>
-                                        <p>Disfruto profundamente de los retos y las competencias técnicas (como WorldSkills). Estos espacios me permiten medir mis habilidades bajo presión, colaborar en equipo y buscar siempre la excelencia.</p>
-                                    </div>
+  <!-- ===== SOBRE MI ===== -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;sobre-mi /&gt;</span>
+        <h2 class="section__title">Quien soy</h2>
+        <div class="section__line"></div>
+      </div>
 
-                                    <div class="sobremi-stats">
-                                        <div class="stat-item">
-                                            <span class="stat-num">1+</span>
-                                            <span class="stat-desc">Año de formación</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-num">5+</span>
-                                            <span class="stat-desc">Proyectos realizados</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-num">7+</span>
-                                            <span class="stat-desc">Lenguajes en practica</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-num">2+</span>
-                                            <span class="stat-desc">Participaciones nacionales 🇨🇴</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="proyectos" id="proyectos">
-                    <hr>
-                    <div class="titulo-seccion">
-                        <h1 class="fijo-nav">Proyectos</h1>
-                    </div>
-
-                    <div class="contenedor-proyectos">
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Backend</span>
-                                <h2 class="tproyecto">🌐 Sistema de Autenticación Web</h2>
-                                <p class="pproyecto">Desarrollo de un sistema de autenticación con PHP y MySQL que permite el registro e inicio de sesión de usuarios. Implementación de validación de datos y seguridad básica en el servidor.</p>
-                                <div class="tech-stack">
-                                    <span>🐘 PHP</span>
-                                    <span>📊 MySQL</span>
-                                    <span>🎨 CSS3</span>
-                                </div>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/proyectophp-2.png" alt="Sistema de Autenticación" class="img-fluida">
-                            </div>
-                        </div>
-
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Robótica</span>
-                                <h2 class="tproyecto">🤖 Robótica Educativa con LEGO</h2>
-                                <p class="pproyecto">Solución de retos técnicos mediante lógica y trabajo colaborativo. Proyecto desarrollado bajo la metodología SENA, fortaleciendo el pensamiento algorítmico.</p>
-                                <div class="tech-stack">
-                                    <span>🧱 LEGO Mindstorms</span>
-                                    <span>🧠 Lógica</span>
-                                </div>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/proyecto2-1.png" alt="Proyecto Robótica" class="img-fluida">
-                            </div>
-                        </div>
-
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Proyecto Personal I</span>
-                                <h2 class="tproyecto">🥷 Calculadora de Bandidaje</h2>
-                                <p class="pproyecto">Proyecto personal enfocado en lógica de programación y humor. Permite medir niveles mediante un cuestionario dinámico procesado con JavaScript puro.</p>
-                                <div class="tech-stack">
-                                    <span>🦊 JavaScript</span>
-                                    <span>🦴 HTML5</span>
-                                    <span>🎨 CSS3</span>
-                                </div>
-                                <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="btn-proyecto">Ver Proyecto</a>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/bandidaje.png" alt="Calculadora Bandidaje" class="img-fluida">
-                            </div>
-                        </div>
-
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Proyecto Grado</span>
-                                <h2 class="tproyecto">♻️ SiGiRec - Sistema de Gestion de Reciclaje</h2>
-                                <p class="pproyecto">SigiRec es un sistema web que organiza y recomienda información de forma eficiente. Permite registrar, gestionar y consultar datos fácilmente, usando tecnologías modernas para automatizar procesos, mejorar decisiones y optimizar la experiencia del usuario.</p>
-                                <div class="tech-stack">
-                                    <span>🦴 HTML5</span>
-                                    <span>🎨 CSS3</span>
-                                    <span>🦊 JavaScript</span>
-                                    <span>🐘 PHP</span>
-                                    <span>📊 MySQL</span>
-                                    <span>🤖 IA (En desarrollo)</span>
-                                    <span>🔬 Investigacion</span>
-                                </div>
-                                <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="btn-proyecto">Ver Proyecto</a>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/sigireccc.png" alt="Proyecto grado" class="img-fluida">
-                            </div>
-                        </div>
-
-
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Proyecto Personal II</span>
-                                <h2 class="tproyecto">🏟️ Sintetic</h2>
-                                <p class="pproyecto">El proyecto Sintetic es una página web creada para gestionar usuarios de un equipo, permitiendo organizarlos en grupos como equipo A y equipo B. La aplicación facilita llevar un control de quiénes participan, quiénes han realizado pagos y quiénes no, además de visualizar la composición de cada equipo. Está desarrollada con tecnologías web como HTML, CSS y JavaScript, ofreciendo una interfaz sencilla para administrar esta información de forma clara y rápida.</p>
-                                <div class="tech-stack">
-                                    <span>🦊 JavaScript</span>
-                                    <span>🦴 HTML5</span>
-                                    <span>🎨 CSS3</span>
-                                </div>
-                                <a href="https://dvskked.github.io/sintetic/" target="_blank" class="btn-proyecto">Ver Proyecto</a>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/sintetic.png" alt="CProyecto de gestion" class="img-fluida">
-                            </div>
-                        </div>
-
-
-
-                        <div class="proyecto-item">
-                            <div class="proyecto-texto">
-                                <span class="tag">Proyecto Personal III</span>
-                                <h2 class="tproyecto">🐬 DelF</h2>
-                                <p class="pproyecto">Proyecto en desarrollo</p>
-                                <div class="tech-stack">
-                                    <span>🐬 C#</span>
-                                    <span>📚 Aprendiendo...</span>
-                                </div>
-                            </div>
-                            <div class="proyecto-imagen">
-                                <img src="img/proyectoC.png" alt="Proyecto CShar" class="img-fluida">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="estudios" id="estudios">
-                    <hr>
-                    <div class="titulo-estudios">
-                        <h1 class="fijo-nav">Estudios</h1>
-                    </div>
-
-                    <div class="contenido-estudios">
-                        <div class="estudio-card">
-                            <div class="card-header">
-                                <span class="badge">En formación</span>
-                                <h2>🎓 Análisis y Desarrollo de Software</h2>
-                                <h4>SENA – Servicio Nacional de Aprendizaje</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Adquiriendo bases sólidas en programación, desarrollo web y lógica computacional, construyendo soluciones orientadas a proyectos reales.</p>
-                                <ul class="skills-list">
-                                    <li><span>🌐</span> Web (HTML, CSS, JS)</li>
-                                    <li><span>📊</span> Backend (PHP, MySQL)</li>
-                                    <li><span>🧠</span> Lógica y Algoritmia</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="estudio-card">
-                            <div class="card-header">
-                                <span class="badge secondary">Académico</span>
-                                <h2>🤖 Robótica Educativa</h2>
-                                <h4>LEGO Education</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Resolución de retos técnicos mediante lógica y creatividad. Fortalecí mis habilidades de análisis y pensamiento estructurado.</p>
-                            </div>
-                        </div>
-
-                        <div class="estudio-card">
-                            <div class="card-header">
-                                <span class="badge special">Competencia</span>
-                                <h2>🏆 Formación por Competencias</h2>
-                                <h4>WorldSkills / Procesos Competitivos</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Disciplina y alto rendimiento técnico en espacios de exposición nacional, enfocados en la atención al detalle y manejo del tiempo.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="logros" id="logros"> <!-- Aqui inicia la seccion de Logros -->
-                    <div class="titulo-logros">
-                        <div class="texto-php">
-                            <br><br><br><br>
-                            <h1 class="fijo-nav">Logros</h1>
-                            <br> 
-                        </div>
-                    </div>
-                    <div class="contenido-logros">
-                        <section class="logros">
-                            <div class="logros-contenedor"> <!-- Informacion sobre mis logros -->
- 
-                                <h1 class="logros-titulo">Logros</h1>
-
-                                <p class="logros-resumen">
-                                    Durante mi formación en Análisis y Desarrollo de Software he obtenido diversos logros
-                                    académicos y técnicos que reflejan mi crecimiento profesional. Estos incluyen
-                                    certificaciones, participación en eventos y competencias, así como procesos de
-                                    aprendizaje continuo enfocados en el desarrollo web y la programación.
-                                </p>
-
-                                <div class="logros-cards">
-
-                                    <div class="logro-card"> <!-- Certificado CINE -->
-                                        <h3>Certificado en Medios Audiovisuales</h3>
-                                        <p>Formación enfocada en producción audiovisual, edición y comunicación digital.</p>
-                                        <button class="btn-certificado" data-file="Certificado Andres Forero cine.pdf">
-                                            Descargar certificado
-                                        </button>
-
-                                    </div>
-
-                                    <div class="logro-card"> <!-- Certificado Python -->
-                                        <h3>Certificación en Python</h3>
-                                        <p>Fundamentos de programación, lógica, estructuras de datos y resolución de problemas.</p>
-                                        <button class="btn-certificado" data-file="certificado-python.png">
-                                            Descargar certificado
-                                        </button>
-                                    </div>
-
-                                    <div class="logro-card"> <!-- Certificado Laboral -->
-                                        <h3>Participación en WorldSkills</h3>
-                                        <p>Competencia técnica enfocada en desarrollo web, diseño y buenas prácticas.</p>
-                                        <button class="btn-certificado" data-file="certificado Andres Forero ws.pdf">
-                                            Descargar certificado
-                                        </button>
-                                    </div>
-
-                                    <div class="logro-card"> <!-- Certificado Exposicion Proyecto -->
-                                        <h3>1er Encuentro semilleros Investigacion Nacional</h3>
-                                        <p>Participación en eventos académicos presentando proyectos y procesos formativos I.</p>
-                                        <button class="btn-certificado" data-file="Certificado Andres Forero pereira.pdf">
-                                            Descargar certificado
-                                        </button>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="logro-card"> <!-- Certificado CINE -->
-                                        <h3>2do Encuentro semilleros Investigacion Regional </h3>
-                                        <p>Participación en eventos académicos presentando proyectos y procesos formativos II.</p>
-                                        <button class="btn-certificado" data-file="AndresForero-certificado-encuentrosemillerosII.pdf">
-                                            Descargar certificado
-                                        </button>
-
-                                    </div>
-
-
-
-                                    <div class="logro-card"> <!-- Certificado CINE -->
-                                        <h3>Estructuracion de proyectos de investigacion</h3>
-                                        <p>Curso de Investigacion certificado</p>
-                                        <button class="btn-certificado" data-file="9309003416897CC1099741266C.pdf">
-                                            Descargar certificado
-                                        </button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div><br><br>
-
-
-                <div class="skills-section">
-                    <h3>Nivel de Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>HTML</span><span>80%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>CSS</span><span>70%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>JavaScript</span><span>40%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Python</span><span>40%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>PHP</span><span>50%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="50%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>MySQL</span><span>70%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>GitHub</span><span>80%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>C#</span><span>5%</span></div>
-                            <div class="progress-bar"><div class="progress" data-width="5%"></div></div>
-                        </div>
-                    </div>
-                </div><br><br>
-
-                
-
-
-                <div class="contacto" id="contacto">
-                    <hr>
-                    <div class="titulo-contacto">
-                        <h1>Contacto</h1>
-                    </div>
-
-                    <div class="contacto-centralizado">
-                        
-                        <div class="contacto-andres">
-                            <div class="datos-basicos-container">
-                                <div class="datos-basicos">
-                                    <p><span>Nombre:</span> Andrés Felipe Forero Sánchez</p>
-                                    <p><span>Perfil:</span> Desarrollador de Software en formación</p>
-                                    <p><span>Ubicación:</span> Bucaramanga</p>
-                                </div>
-
-                                <div class="datos-contacto">
-                                    <p><span>Correo:</span><br>📧 <strong>siriusplanet76@gmail.com</strong></p>
-                                    <p><span>GitHub:</span><br>🐈 <a href="https://github.com/Dvskked" target="_blank">github.com/Dvskked</a></p>
-                                </div>
-                            </div>
-
-                            <div class="form-container">
-                                <form id="portfolioContactForm">
-                                    <div class="input-group">
-                                        <input type="text" id="nombre" placeholder="Nombre completo" required>
-                                    </div>
-                                    <div class="input-group">
-                                        <input type="email" id="email" placeholder="Correo electrónico" required>
-                                    </div>
-                                    <div class="input-group">
-                                        <textarea id="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn-enviar">Enviar Mensaje (Simulacion)</button>
-                                </form>
-                                <div id="formStatus" class="form-status hidden"></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+      <div class="about">
+        <div class="about__photo anim-reveal">
+          <div class="about__photo-frame">
+            <img src="img/perfil-andres.png" alt="Andres Felipe Forero Sanchez">
+            <div class="about__photo-border"></div>
+          </div>
         </div>
-        <br>
 
-        <script src="js/script.js"></script> <!-- Script enlazado de funcionalidades basicas -->
-        <script src="js/certificado.js"></script> <!-- Script enlazado con descargas de mi certificado -->
-    </body>
+        <div class="about__content anim-reveal">
+          <p class="about__text">
+            Soy aprendiz de <strong>Analisis y Desarrollo de Software en el SENA CSET de Bucaramanga</strong>,
+            con un enfoque solido en el <strong>desarrollo web full stack</strong>. Mi pasion es construir
+            interfaces que no solo se ven bien, sino que estan bien estructuradas, son funcionales y brindan
+            una experiencia de usuario excepcional.
+          </p>
+          <p class="about__text">
+            Memotivan los retos y las competencias tecnicas como <strong>WorldSkills</strong>, donde he aprendido
+            a trabajar bajo presion, colaborar en equipo y buscar la excelencia en cada proyecto. Cada linea
+            de codigo que escribo es una oportunidad para mejorar y aprender algo nuevo.
+          </p>
+
+          <div class="about__stats">
+            <div class="about__stat anim-reveal">
+              <span class="about__stat-number" data-count="1">0</span>
+              <span class="about__stat-label">Año de formacion</span>
+            </div>
+            <div class="about__stat anim-reveal">
+              <span class="about__stat-number" data-count="6">0</span>
+              <span class="about__stat-label">Proyectos realizados</span>
+            </div>
+            <div class="about__stat anim-reveal">
+              <span class="about__stat-number" data-count="7">0</span>
+              <span class="about__stat-label">Tecnologias</span>
+            </div>
+            <div class="about__stat anim-reveal">
+              <span class="about__stat-number" data-count="2">0</span>
+              <span class="about__stat-label">Competiciones nacionales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section class="section section--alt" id="proyectos">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;proyectos /&gt;</span>
+        <h2 class="section__title">Trabajo reciente</h2>
+        <p class="section__desc">Proyectos que reflejan mi crecimiento como desarrollador</p>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="projects">
+
+        <article class="project anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">Proyecto Grado</span>
+            <h3 class="project__title">SiGiRec - Sistema de Gestion de Reciclaje</h3>
+            <p class="project__desc">
+              Sistema web que organiza y recomienda informacion de forma eficiente. Permite registrar,
+              gestionar y consultar datos facilmente, usando tecnologias modernas para automatizar procesos,
+              mejorar decisiones y optimizar la experiencia del usuario. Proyecto de grado con enfoque en investigacion.
+            </p>
+            <div class="project__tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>IA</span>
+            </div>
+            <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="project__link">
+              Ver proyecto
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="project__image">
+            <img src="img/sigireccc.png" alt="SiGiRec - Sistema de Gestion de Reciclaje">
+          </div>
+        </article>
+
+        <article class="project project--reverse anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">Backend</span>
+            <h3 class="project__title">Sistema de Autenticacion Web</h3>
+            <p class="project__desc">
+              Sistema completo de autenticacion con PHP y MySQL que permite registro e inicio de sesion de usuarios.
+              Implementacion de validacion de datos, sesiones seguras y manejo de errores en el servidor.
+            </p>
+            <div class="project__tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>CSS3</span>
+            </div>
+          </div>
+          <div class="project__image">
+            <img src="img/proyectophp-2.png" alt="Sistema de Autenticacion Web">
+          </div>
+        </article>
+
+        <article class="project anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">Proyecto Personal</span>
+            <h3 class="project__title">Calculadora de Bandidaje</h3>
+            <p class="project__desc">
+              Proyecto personal enfocado en logica de programacion y diversion. Permite medir niveles
+              mediante un cuestionario dinamico procesado con JavaScript puro. Diseño responsivo y animaciones fluidas.
+            </p>
+            <div class="project__tech">
+              <span>JavaScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="project__link">
+              Ver proyecto
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="project__image">
+            <img src="img/bandidaje.png" alt="Calculadora de Bandidaje">
+          </div>
+        </article>
+
+        <article class="project project--reverse anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">Proyecto Personal</span>
+            <h3 class="project__title">Sintetic - Gestion de Equipos</h3>
+            <p class="project__desc">
+              Aplicacion web para gestionar usuarios de un equipo, permitiendo organizarlos en grupos
+              como equipo A y equipo B. Facilita llevar un control de participantes, pagos y composicion
+              de cada equipo con una interfaz clara y rapida.
+            </p>
+            <div class="project__tech">
+              <span>JavaScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <a href="https://dvskked.github.io/sintetic/" target="_blank" class="project__link">
+              Ver proyecto
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="project__image">
+            <img src="img/sintetic.png" alt="Sintetic - Gestion de Equipos">
+          </div>
+        </article>
+
+        <article class="project anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">Robotica</span>
+            <h3 class="project__title">Robotica Educativa con LEGO</h3>
+            <p class="project__desc">
+              Solucion de retos tecnicos mediante logica y trabajo colaborativo. Proyecto desarrollado
+              bajo la metodologia SENA, fortaleciendo el pensamiento algoritmico y la resolucion de problemas.
+            </p>
+            <div class="project__tech">
+              <span>LEGO Mindstorms</span>
+              <span>Logica</span>
+            </div>
+          </div>
+          <div class="project__image">
+            <img src="img/proyecto2-1.png" alt="Robotica Educativa LEGO">
+          </div>
+        </article>
+
+        <article class="project project--reverse anim-reveal">
+          <div class="project__info">
+            <span class="project__tag">En desarrollo</span>
+            <h3 class="project__title">DelF - Aplicacion de Escritorio</h3>
+            <p class="project__desc">
+              Proyecto en desarrollo enfocado en aprender C# y crear una aplicacion de escritorio funcional.
+              Reto personal de ampliar horizontes mas alla del desarrollo web.
+            </p>
+            <div class="project__tech">
+              <span>C#</span>
+              <span>En proceso...</span>
+            </div>
+          </div>
+          <div class="project__image">
+            <img src="img/proyectoC.png" alt="DelF - Proyecto C#">
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESTUDIOS ===== -->
+  <section class="section" id="estudios">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;estudios /&gt;</span>
+        <h2 class="section__title">Formacion academica</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="studies">
+        <div class="study-card anim-reveal">
+          <div class="study-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="study-card__badge">En formacion</div>
+          <h3 class="study-card__title">Analisis y Desarrollo de Software</h3>
+          <p class="study-card__institution">SENA - Servicio Nacional de Aprendizaje</p>
+          <p class="study-card__desc">
+            Adquiriendo bases solidas en programacion, desarrollo web y logica computacional,
+            construyendo soluciones orientadas a proyectos reales.
+          </p>
+          <ul class="study-card__skills">
+            <li>Web (HTML, CSS, JS)</li>
+            <li>Backend (PHP, MySQL)</li>
+            <li>Logica y Algoritmia</li>
+          </ul>
+        </div>
+
+        <div class="study-card anim-reveal">
+          <div class="study-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+          </div>
+          <div class="study-card__badge study-card__badge--purple">Robotica</div>
+          <h3 class="study-card__title">Robotica Educativa</h3>
+          <p class="study-card__institution">LEGO Education</p>
+          <p class="study-card__desc">
+            Resolucion de retos tecnicos mediante logica y creatividad. Fortalecimiento de
+            habilidades de analisis y pensamiento estructurado.
+          </p>
+        </div>
+
+        <div class="study-card anim-reveal">
+          <div class="study-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
+          <div class="study-card__badge study-card__badge--cyan">Competencia</div>
+          <h3 class="study-card__title">Formacion por Competencias</h3>
+          <p class="study-card__institution">WorldSkills / Procesos Competitivos</p>
+          <p class="study-card__desc">
+            Disciplina y alto rendimiento tecnico en espacios de exposicion nacional,
+            enfocados en la atencion al detalle y manejo del tiempo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGROS ===== -->
+  <section class="section section--alt" id="logros">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;logros /&gt;</span>
+        <h2 class="section__title">Certificaciones y logros</h2>
+        <p class="section__desc">
+          Durante mi formacion he obtenido certificaciones y participado en eventos que reflejan
+          mi crecimiento profesional y compromiso con la excelencia.
+        </p>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="achievements">
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <h3 class="achievement__title">Certificado en Medios Audiovisuales</h3>
+          <p class="achievement__desc">Formacion enfocada en produccion audiovisual, edicion y comunicacion digital.</p>
+          <button class="achievement__btn btn-certificado" data-file="Certificado Andres Forero cine.pdf">Descargar certificado</button>
+        </div>
+
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="achievement__title">Certificacion en Python</h3>
+          <p class="achievement__desc">Fundamentos de programacion, logica, estructuras de datos y resolucion de problemas.</p>
+          <button class="achievement__btn btn-certificado" data-file="certificado-python.png">Descargar certificado</button>
+        </div>
+
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
+          <h3 class="achievement__title">Participacion en WorldSkills</h3>
+          <p class="achievement__desc">Competencia tecnica enfocada en desarrollo web, diseno y buenas practicas.</p>
+          <button class="achievement__btn btn-certificado" data-file="certificado Andres Forero ws.pdf">Descargar certificado</button>
+        </div>
+
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="achievement__title">1er Encuentro Semilleros de Investigacion</h3>
+          <p class="achievement__desc">Participacion nacional presentando proyectos y procesos formativos.</p>
+          <button class="achievement__btn btn-certificado" data-file="Certificado Andres Forero pereira.pdf">Descargar certificado</button>
+        </div>
+
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="achievement__title">2do Encuentro Semilleros Regional</h3>
+          <p class="achievement__desc">Participacion en eventos academicos presentando proyectos formativos.</p>
+          <button class="achievement__btn btn-certificado" data-file="AndresForero-certificado-encuentrosemillerosII.pdf">Descargar certificado</button>
+        </div>
+
+        <div class="achievement anim-reveal">
+          <div class="achievement__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <h3 class="achievement__title">Estructuracion de Proyectos de Investigacion</h3>
+          <p class="achievement__desc">Curso de investigacion certificado.</p>
+          <button class="achievement__btn btn-certificado" data-file="9309003416897CC1099741266C.pdf">Descargar certificado</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;skills /&gt;</span>
+        <h2 class="section__title">Nivel de habilidades</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="skills">
+        <div class="skills__bars">
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>HTML5</span><span>80%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="80"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>CSS3</span><span>70%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="70"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>JavaScript</span><span>40%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="40"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>Python</span><span>40%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="40"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>PHP</span><span>50%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="50"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>MySQL</span><span>70%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="70"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>GitHub</span><span>80%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="80"></div></div>
+          </div>
+          <div class="skill anim-reveal">
+            <div class="skill__header"><span>C#</span><span>5%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-width="5"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MI PROMESA / VISION FUTURA ===== -->
+  <section class="section section--alt" id="promesa">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;vision /&gt;</span>
+        <h2 class="section__title">Mi promesa al mundo del codigo</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="promise anim-reveal">
+        <div class="promise__card">
+          <div class="promise__quote">"</div>
+          <p class="promise__text">
+            No solo quiero aprender a programar. Quiero construir soluciones que importen.
+            Cada dia me desafio a ser mejor que ayer, a escribir codigo mas limpio,
+            a pensar en el usuario final y a nunca dejar de aprender.
+          </p>
+          <p class="promise__text">
+            Mi meta no es solo dominar tecnologias, sino <strong>crear productos que la gente quiera usar</strong>,
+            que resuelvan problemas reales y que dejen una huella positiva. Creo firmemente que el codigo
+            es el lenguaje mas poderoso para cambiar el mundo.
+          </p>
+
+          <div class="promise__goals">
+            <div class="promise__goal">
+              <div class="promise__goal-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h4>Full Stack Developer</h4>
+              <p>Domina el frontend y el backend para crear soluciones completas de principio a fin.</p>
+            </div>
+            <div class="promise__goal">
+              <div class="promise__goal-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4>Senior en 3 años</h4>
+              <p>Mi hoja de ruta: aprender, practicar, construir, enseñar y crecer cada dia sin descanso.</p>
+            </div>
+            <div class="promise__goal">
+              <div class="promise__goal-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4>Impactar comunidades</h4>
+              <p>Usar la tecnologia para resolver problemas reales en mi comunidad y en Latinoamerica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section__header anim-reveal">
+        <span class="section__tag">&lt;contacto /&gt;</span>
+        <h2 class="section__title">Hablemos</h2>
+        <p class="section__desc">Siempre abierto a nuevas oportunidades y colaboraciones</p>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="contact">
+        <div class="contact__info anim-reveal">
+          <div class="contact__card">
+            <h3 class="contact__name">Andres Felipe Forero Sanchez</h3>
+            <p class="contact__role">Desarrollador de Software en formacion</p>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Bucaramanga, Colombia</span>
+              </div>
+              <div class="contact__detail">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:siriusplanet76@gmail.com">siriusplanet76@gmail.com</a>
+              </div>
+              <div class="contact__detail">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <a href="https://github.com/Dvskked" target="_blank">github.com/Dvskked</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form anim-reveal">
+          <form id="portfolioContactForm">
+            <div class="form-group">
+              <input type="text" id="nombre" placeholder=" " required>
+              <label for="nombre">Nombre completo</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required>
+              <label for="email">Correo electronico</label>
+            </div>
+            <div class="form-group">
+              <textarea id="mensaje" rows="5" placeholder=" " required></textarea>
+              <label for="mensaje">Tu mensaje</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="btnEnviar">
+              <span>Enviar mensaje</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+          <div id="formStatus" class="form-status hidden"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2026 Andres Felipe Forero Sanchez. Todos los derechos reservados.</p>
+        <p class="footer__built">Construido con dedicacion y mucho cafe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/certificado.js"></script>
+</body>
 </html>
