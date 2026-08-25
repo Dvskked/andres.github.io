@@ -792,117 +792,171 @@ input, textarea { font-family: inherit; }
 }
 
 /* ================================================================
-   9. PROJECTS SECTION
+   9. PROJECTS SECTION — Card Grid + VanillaTilt
    ================================================================ */
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2xl);
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-lg);
 }
 
-.project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
-  align-items: center;
+.pcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: var(--space-xl);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--bg-card);
   backdrop-filter: blur(8px);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
   transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
 }
 
-.project:hover {
-  transform: translateY(-4px);
+.pcard:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-md), var(--shadow-glow);
 }
 
-.project--reverse {
-  direction: rtl;
+.pcard__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pcard-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 
-.project--reverse > * {
-  direction: ltr;
+.pcard:hover .pcard__glow {
+  opacity: 1;
 }
 
-.project__tag {
-  font-family: var(--font-mono);
-  font-size: var(--size-xs);
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
+.pcard__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
 }
 
-.project__title {
+.pcard__icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: grayscale(0.2);
+}
+
+.pcard__links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.pcard__gh,
+.pcard__live {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: rgba(92,115,242,0.04);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.pcard__gh:hover,
+.pcard__live:hover {
+  color: var(--white);
+  border-color: var(--primary);
+  background: rgba(92,115,242,0.12);
+}
+
+.pcard__title {
   font-family: var(--font-display);
-  font-size: var(--size-xl);
+  font-size: var(--size-lg);
   font-weight: var(--weight-bold);
   color: var(--white);
-  margin: var(--space-sm) 0 var(--space-md);
+  margin-bottom: var(--space-sm);
   line-height: var(--leading-tight);
 }
 
-.project__desc {
+.pcard__desc {
   font-size: var(--size-sm);
   color: var(--text-muted);
   line-height: var(--leading-loose);
+  flex: 1;
+  margin-bottom: var(--space-lg);
 }
 
-.project__tech {
+.pcard__tech {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-lg);
+  gap: 6px;
+  margin-bottom: var(--space-md);
 }
 
-.project__tech span {
-  padding: 0.25rem 0.7rem;
+.pcard__tech span {
+  padding: 0.2rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
   background: rgba(92,115,242,0.04);
   transition: border-color 0.2s, color 0.2s;
 }
 
-.project__tech span:hover {
+.pcard__tech span:hover {
   border-color: var(--primary);
   color: var(--primary-light);
 }
 
-.project__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: var(--space-lg);
-  font-size: var(--size-sm);
-  font-weight: var(--weight-semi);
-  color: var(--primary-light);
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: border-color 0.2s, gap 0.2s;
+.pcard__cat {
+  font-family: var(--font-mono);
+  font-size: var(--size-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  opacity: 0.7;
 }
 
-.project__link:hover {
-  border-color: var(--primary-light);
-  gap: 10px;
+/* Staggered reveal for cards */
+.pcard.anim-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
 }
 
-.project__image img {
-  width: 100%;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.4s var(--ease), box-shadow 0.3s;
+.pcard.anim-reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-.project:hover .project__image img {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-lg);
+.pcard:nth-child(2).anim-reveal { transition-delay: 0.08s; }
+.pcard:nth-child(3).anim-reveal { transition-delay: 0.16s; }
+.pcard:nth-child(4).anim-reveal { transition-delay: 0.24s; }
+.pcard:nth-child(5).anim-reveal { transition-delay: 0.32s; }
+.pcard:nth-child(6).anim-reveal { transition-delay: 0.40s; }
+.pcard:nth-child(7).anim-reveal { transition-delay: 0.48s; }
+.pcard:nth-child(8).anim-reveal { transition-delay: 0.56s; }
+.pcard:nth-child(9).anim-reveal { transition-delay: 0.64s; }
+.pcard:nth-child(10).anim-reveal { transition-delay: 0.72s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ================================================================
@@ -1462,14 +1516,6 @@ input, textarea { font-family: inherit; }
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .project,
-  .project--reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-  }
-
-  .project--reverse > * { direction: ltr; }
-
   .contact {
     grid-template-columns: 1fr;
   }
@@ -1514,7 +1560,7 @@ input, textarea { font-family: inherit; }
   .promise__card { padding: var(--space-xl); }
   .promise__goals { grid-template-columns: 1fr; }
 
-  .project { padding: var(--space-lg); }
+  .pcard { padding: var(--space-lg); }
 
   .contact__card,
   .contact__form { padding: var(--space-lg); }
