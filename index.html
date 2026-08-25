@@ -136,7 +136,7 @@
               <span class="about__stat-label">Año de formacion</span>
             </div>
             <div class="about__stat anim-reveal">
-              <span class="about__stat-number" data-count="6">0</span>
+              <span class="about__stat-number" data-count="10">0</span>
               <span class="about__stat-label">Proyectos realizados</span>
             </div>
             <div class="about__stat anim-reveal">
@@ -163,135 +163,169 @@
         <div class="section__line"></div>
       </div>
 
-      <div class="projects">
+      <div class="projects-grid">
 
-        <article class="project anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">Proyecto Grado</span>
-            <h3 class="project__title">SiGiRec - Sistema de Gestion de Reciclaje</h3>
-            <p class="project__desc">
-              Sistema web que organiza y recomienda informacion de forma eficiente. Permite registrar,
-              gestionar y consultar datos facilmente, usando tecnologias modernas para automatizar procesos,
-              mejorar decisiones y optimizar la experiencia del usuario. Proyecto de grado con enfoque en investigacion.
-            </p>
-            <div class="project__tech">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>IA</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#38bdf8"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">♻️</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/sigirec" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="pcard__live" aria-label="Demo en vivo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
-            <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="project__link">
-              Ver proyecto
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
-          <div class="project__image">
-            <img src="img/sigireccc.png" alt="SiGiRec - Sistema de Gestion de Reciclaje">
+          <h3 class="pcard__title">SiGiRec</h3>
+          <p class="pcard__desc">Sistema inteligente de gestion de reciclaje con IA. Detecta botellas PET, tapas y etiquetas mediante YOLOv8 y asigna SIGIPUNTOS a los usuarios.</p>
+          <div class="pcard__tech">
+            <span>Python</span><span>Flask</span><span>YOLOv8</span><span>MySQL</span><span>OpenCV</span>
           </div>
+          <span class="pcard__cat">Proyecto Grado · IA</span>
         </article>
 
-        <article class="project project--reverse anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">Backend</span>
-            <h3 class="project__title">Sistema de Autenticacion Web</h3>
-            <p class="project__desc">
-              Sistema completo de autenticacion con PHP y MySQL que permite registro e inicio de sesion de usuarios.
-              Implementacion de validacion de datos, sesiones seguras y manejo de errores en el servidor.
-            </p>
-            <div class="project__tech">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>CSS3</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#f97316"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">📊</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/practica-analisisdatos-python" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
             </div>
           </div>
-          <div class="project__image">
-            <img src="img/proyectophp-2.png" alt="Sistema de Autenticacion Web">
+          <h3 class="pcard__title">Retail Analytics</h3>
+          <p class="pcard__desc">Pipeline completo de ciencia de datos: generacion de datos sinteticos, limpieza, analisis estadico, visualizacion interactiva y segmentacion de clientes con ML.</p>
+          <div class="pcard__tech">
+            <span>Python</span><span>Pandas</span><span>Plotly</span><span>Scikit-learn</span><span>Matplotlib</span>
           </div>
+          <span class="pcard__cat">Data Science · ML</span>
         </article>
 
-        <article class="project anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">Proyecto Personal</span>
-            <h3 class="project__title">Calculadora de Bandidaje</h3>
-            <p class="project__desc">
-              Proyecto personal enfocado en logica de programacion y diversion. Permite medir niveles
-              mediante un cuestionario dinamico procesado con JavaScript puro. Diseño responsivo y animaciones fluidas.
-            </p>
-            <div class="project__tech">
-              <span>JavaScript</span>
-              <span>HTML5</span>
-              <span>CSS3</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#336791"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🗄️</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/aprendiendo-bd" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
             </div>
-            <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="project__link">
-              Ver proyecto
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
-          <div class="project__image">
-            <img src="img/bandidaje.png" alt="Calculadora de Bandidaje">
+          <h3 class="pcard__title">Aprendiendo BD</h3>
+          <p class="pcard__desc">Curso practico y progresivo de bases de datos con PostgreSQL y Docker. Desde DDL basico hasta CTEs recursivas, triggers y optimizacion con EXPLAIN ANALYZE.</p>
+          <div class="pcard__tech">
+            <span>PostgreSQL</span><span>Docker</span><span>SQL</span><span>PL/pgSQL</span>
           </div>
+          <span class="pcard__cat">Educacion · Backend</span>
         </article>
 
-        <article class="project project--reverse anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">Proyecto Personal</span>
-            <h3 class="project__title">Sintetic - Gestion de Equipos</h3>
-            <p class="project__desc">
-              Aplicacion web para gestionar usuarios de un equipo, permitiendo organizarlos en grupos
-              como equipo A y equipo B. Facilita llevar un control de participantes, pagos y composicion
-              de cada equipo con una interfaz clara y rapida.
-            </p>
-            <div class="project__tech">
-              <span>JavaScript</span>
-              <span>HTML5</span>
-              <span>CSS3</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#f43f5e"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🎮</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/jueganho" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
             </div>
-            <a href="https://dvskked.github.io/sintetic/" target="_blank" class="project__link">
-              Ver proyecto
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
-          <div class="project__image">
-            <img src="img/sintetic.png" alt="Sintetic - Gestion de Equipos">
+          <h3 class="pcard__title">Neon Letal</h3>
+          <p class="pcard__desc">Shooter arcade top-down cyberpunk en el navegador. 10 distritos, 40 armas procedurales, combos, sonidos con Web Audio API y estetica CRT. Cero dependencias.</p>
+          <div class="pcard__tech">
+            <span>HTML5 Canvas</span><span>JavaScript</span><span>Web Audio API</span><span>CSS3</span>
           </div>
+          <span class="pcard__cat">Game Dev · Frontend</span>
         </article>
 
-        <article class="project anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">Robotica</span>
-            <h3 class="project__title">Robotica Educativa con LEGO</h3>
-            <p class="project__desc">
-              Solucion de retos tecnicos mediante logica y trabajo colaborativo. Proyecto desarrollado
-              bajo la metodologia SENA, fortaleciendo el pensamiento algoritmico y la resolucion de problemas.
-            </p>
-            <div class="project__tech">
-              <span>LEGO Mindstorms</span>
-              <span>Logica</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#ec4899"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🎲</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/bandidaje.github.io" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="pcard__live" aria-label="Demo en vivo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
           </div>
-          <div class="project__image">
-            <img src="img/proyecto2-1.png" alt="Robotica Educativa LEGO">
+          <h3 class="pcard__title">Calculadora de Bandidaje</h3>
+          <p class="pcard__desc">Portal web con dos calculadoras interactivas. Diseno neon con glassmorphism, documentacion plegable y SEO completo con datos estructurados JSON-LD.</p>
+          <div class="pcard__tech">
+            <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>JSON-LD</span>
           </div>
+          <span class="pcard__cat">Proyecto Personal · Web</span>
         </article>
 
-        <article class="project project--reverse anim-reveal">
-          <div class="project__info">
-            <span class="project__tag">En desarrollo</span>
-            <h3 class="project__title">DelF - Aplicacion de Escritorio</h3>
-            <p class="project__desc">
-              Proyecto en desarrollo enfocado en aprender C# y crear una aplicacion de escritorio funcional.
-              Reto personal de ampliar horizontes mas alla del desarrollo web.
-            </p>
-            <div class="project__tech">
-              <span>C#</span>
-              <span>En proceso...</span>
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#10b981"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">⚽</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/sintetic" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="https://dvskked.github.io/sintetic/" target="_blank" class="pcard__live" aria-label="Demo en vivo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
           </div>
-          <div class="project__image">
-            <img src="img/proyectoC.png" alt="DelF - Proyecto C#">
+          <h3 class="pcard__title">Sintetic</h3>
+          <p class="pcard__desc">Panel de gestion de equipos de futbol. Control de jugadores, pagos, busqueda en tiempo real, estadisticas y exportacion/importacion JSON con persistencia local.</p>
+          <div class="pcard__tech">
+            <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>localStorage</span>
           </div>
+          <span class="pcard__cat">Proyecto Personal · Web</span>
+        </article>
+
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#8b5cf6"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">📦</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/inventory-system" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="pcard__title">InventoryFlow</h3>
+          <p class="pcard__desc">Sistema completo de gestion de inventarios y ventas con arquitectura MVC, POS, reportes, autenticacion bcrypt, CSRF y tests PHPUnit.</p>
+          <div class="pcard__tech">
+            <span>PHP 8.1</span><span>MySQL</span><span>MVC</span><span>PHPUnit</span><span>Composer</span>
+          </div>
+          <span class="pcard__cat">Backend · Full Stack</span>
+        </article>
+
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#06b6d4"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🐾</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/petcarebro" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="pcard__title">PetCare Pro</h3>
+          <p class="pcard__desc">Sistema de gestion y cuidado de mascotas con dashboard, paseos, alimentacion, veterinaria, calendario y score de salud. Glassmorphism + 17 animaciones CSS.</p>
+          <div class="pcard__tech">
+            <span>JavaScript</span><span>CSS3</span><span>HTML5</span><span>localStorage</span><span>Font Awesome</span>
+          </div>
+          <span class="pcard__cat">Frontend · App Web</span>
+        </article>
+
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#f59e0b"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🔥</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/devforge" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="pcard__title">DevForge</h3>
+          <p class="pcard__desc">Plataforma multi-lenguaje de productividad para desarrolladores. APIs REST en Python, Node.js y PHP, CLI en Go, dashboard en tiempo real y Docker.</p>
+          <div class="pcard__tech">
+            <span>Python</span><span>Node.js</span><span>PHP</span><span>Go</span><span>Docker</span><span>FastAPI</span>
+          </div>
+          <span class="pcard__cat">Full Stack · Microservicios</span>
+        </article>
+
+        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+          <div class="pcard__glow" style="--pcard-accent:#a78bfa"></div>
+          <div class="pcard__head">
+            <span class="pcard__icon">🧠</span>
+            <div class="pcard__links">
+              <a href="https://github.com/Dvskked/focusflow" target="_blank" class="pcard__gh" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="pcard__title">FocusFlow</h3>
+          <p class="pcard__desc">Mini app Pomodoro + lista de tareas con persistencia en localStorage, PWA offline, accesibilidad y atajos de teclado. Productividad sin distracciones.</p>
+          <div class="pcard__tech">
+            <span>JavaScript</span><span>PWA</span><span>Service Worker</span><span>CSS3</span>
+          </div>
+          <span class="pcard__cat">PWA · Productividad</span>
         </article>
 
       </div>
@@ -593,6 +627,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/certificado.js"></script>
 </body>
