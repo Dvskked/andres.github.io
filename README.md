@@ -1,84 +1,25 @@
-# Portafolio - Andres
+# Andres — Portafolio
 
-> Desarrollador de Software en formacion | SENA CSET Bucaramanga
+Portafolio personal de Andres, estudiante de desarrollo de software. Una selección de proyectos, tecnologías y formación.
 
-## Sobre este proyecto
+## Ejecutar localmente
 
-Portafolio personal profesional construido con HTML5, CSS3 y JavaScript vanilla. Un sitio web moderno, responsivo y animado que muestra mis habilidades, proyectos, certificaciones y mi vision como desarrollador de software.
+1. Descarga o clona este repositorio.
+2. Abre la carpeta `andres.github.io` en Visual Studio Code.
+3. Abre `index.html` en tu navegador o utiliza una extensión como Live Server.
 
-## Caracteristicas
+No requiere instalación de dependencias ni proceso de compilación.
 
-- Diseno dark glassmorphism con acentos neon
-- Completamente responsivo (desktop, tablet, mobile)
-- Menu hamburguesa en movil
-- Animaciones de scroll reveal con IntersectionObserver
-- Barras de progreso animadas
-- Contadores animados
-- Efecto typing en el hero
-- Formulario de contacto funcional (simulado)
-- Descarga de certificados y CV
-- Sin dependencias externas (solo Google Fonts)
+## Estructura
 
-## Tecnologias utilizadas
+- `index.html`: contenido y estructura del sitio.
+- `css/style.css`: estilos, diseño adaptable y animaciones.
+- `js/script.js`: navegación móvil y animaciones de entrada.
+- `img/`: imágenes de perfil y vistas previas de proyectos.
 
-| Tecnologia | Uso |
-|------------|-----|
-| HTML5 | Estructura semantica |
-| CSS3 | Diseno, animaciones, grid, flexbox |
-| JavaScript | Interactividad, IntersectionObserver |
-| Google Fonts | Syne, DM Sans, JetBrains Mono |
+## Contacto
 
-## Estructura del proyecto
+- Correo: siriusplanet76@gmail.com
+- GitHub: https://github.com/Dvskked
 
-```
-andres.github.io/
-├── index.html          # Pagina principal
-├── css/
-│   └── style.css       # Estilos y sistema de diseno
-├── js/
-│   ├── script.js       # Interactividad principal
-│   └── certificado.js  # Descarga de certificados
-├── certificado/        # PDFs de certificados
-├── cv/                 # Archivos de hoja de vida
-├── img/                # Imagenes y iconos
-└── README.md           # Este archivo
-```
-
-## Sections
-
-1. **Hero** - Presentacion principal con efecto typing
-2. **Sobre mi** - Biografia y estadisticas
-3. **Proyectos** - 6 proyectos destacados con tecnologias utilizadas
-4. **Estudios** - Formacion academica y competencias
-5. **Logros** - Certificaciones descargables
-6. **Skills** - Nivel de habilidades con barras animadas
-7. **Vision** - Promesa y objetivos futuros
-8. **Contacto** - Informacion de contacto y formulario
-
-## Como ejecutar
-
-```bash
-# Opcion 1: Abrir directamente en el navegador
-open index.html
-
-# Opcion 2: Usar un servidor local (recomendado)
-# Con Python
-python -m http.server 8000
-
-# Con Node.js
-npx serve .
-
-# Con PHP
-php -S localhost:8000
-```
-
-## Autor
-
-**Andres**
-- GitHub: [Dvskked](https://github.com/Dvskked)
-- Email: siriusplanet76@gmail.com
-- Ubicacion: Bucaramanga, Colombia
-
----
-
-*Construido con dedicacion y mucho cafe.*
+© 2026 Andres.

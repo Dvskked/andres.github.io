@@ -1,786 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andres Forero | Desarrollador Full Stack en Bucaramanga | Portafolio</title>
-  <meta name="description" content="Portafolio profesional de Andres Felipe Forero Sanchez - Desarrollador Full Stack en formacion en SENA Bucaramanga. Proyectos con JavaScript, Python, PHP, MySQL y mas.">
-  <meta name="keywords" content="Andres Forero, desarrollador web, portafolio, Full Stack, SENA, Bucaramanga, JavaScript, PHP, Python, MySQL, HTML5, CSS3, C#, GitHub, desarrollador de software">
-  <meta name="author" content="Andres Felipe Forero Sanchez">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="theme-color" content="#070912">
-  <meta name="language" content="Spanish">
-  <link rel="canonical" href="https://andres.github.io/">
-
-  <!-- Open Graph / Facebook -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Portafolio de Andres, desarrollador de software. Proyectos de desarrollo web, backend, automatización y análisis de datos.">
+  <meta name="author" content="Andres">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://andres.github.io/">
-  <meta property="og:title" content="Andres Forero | Desarrollador Full Stack en Bucaramanga">
-  <meta property="og:description" content="Portafolio profesional de Andres Felipe Forero Sanchez - Desarrollador Full Stack en formacion en SENA Bucaramanga. Proyectos con JavaScript, Python, PHP, MySQL y mas.">
-  <meta property="og:image" content="https://andres.github.io/img/perfil-andres.png">
-  <meta property="og:locale" content="es_CO">
-  <meta property="og:site_name" content="Andres Forero - Portafolio">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://andres.github.io/">
-  <meta name="twitter:title" content="Andres Forero | Desarrollador Full Stack en Bucaramanga">
-  <meta name="twitter:description" content="Portafolio profesional de Andres Felipe Forero Sanchez - Desarrollador Full Stack en formacion en SENA Bucaramanga.">
-  <meta name="twitter:image" content="https://andres.github.io/img/perfil-andres.png">
-
-  <!-- Preconnect for Google Fonts -->
+  <meta property="og:title" content="Andres — Software Developer">
+  <meta property="og:description" content="Proyectos, tecnología y desarrollo de software.">
+  <meta property="og:image" content="img/perfil-andres.png">
+  <title>Andres — Software Developer</title>
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/logo.ico" type="image/x-icon">
-
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Andres Felipe Forero Sanchez",
-    "url": "https://andres.github.io",
-    "image": "https://andres.github.io/img/perfil-andres.png",
-    "jobTitle": "Desarrollador de Software Full Stack",
-    "description": "Desarrollador Full Stack en formacion en SENA CSET Bucaramanga, Colombia. Especializado en JavaScript, Python, PHP, MySQL y desarrollo web.",
+    "name": "Andres",
+    "jobTitle": "Estudiante de desarrollo de software",
     "email": "siriusplanet76@gmail.com",
-    "sameAs": [
-      "https://github.com/Dvskked"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bucaramanga",
-      "addressRegion": "Santander",
-      "addressCountry": "CO"
-    },
-    "knowsAbout": ["JavaScript", "Python", "PHP", "MySQL", "HTML5", "CSS3", "C#", "GitHub", "Desarrollo Web", "Full Stack"],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "SENA - Servicio Nacional de Aprendizaje"
-    }
+    "url": "https://github.com/Dvskked",
+    "sameAs": ["https://github.com/Dvskked"],
+    "knowsAbout": ["JavaScript", "Python", "PHP", "SQL", "Desarrollo web", "Análisis de datos"]
   }
   </script>
 </head>
 <body>
-
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="header__inner">
-      <a href="#hero" class="header__brand">
-        <img src="img/wapo.jpeg" alt="Andres Forero" class="header__foto">
-        <div class="header__info">
-          <span class="header__nombre">Andres Forero</span>
-          <span class="header__rol">Software Developer</span>
-        </div>
-      </a>
-
-      <nav class="header__nav" id="navMenu">
-        <a href="#hero" class="header__link active">Inicio</a>
-        <a href="#sobre-mi" class="header__link">Sobre mi</a>
-        <a href="#proyectos" class="header__link">Proyectos</a>
-        <a href="#estudios" class="header__link">Estudios</a>
-        <a href="#logros" class="header__link">Logros</a>
-        <a href="#skills" class="header__link">Skills</a>
-        <a href="#contacto" class="header__link">Contacto</a>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Andres, inicio"><span class="brand-mark">A<span>.</span></span><span class="brand-name">ANDRES<span class="brand-role">SOFTWARE DEVELOPER</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" id="navMenu" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#formacion">Formación</a><a href="#contacto" class="nav-contact">Contacto <span>↗</span></a>
       </nav>
-
-      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu de navegacion">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__bg">
-      <div class="hero__orb hero__orb--1"></div>
-      <div class="hero__orb hero__orb--2"></div>
-      <div class="hero__grid"></div>
-    </div>
-
-    <div class="hero__content">
-      <span class="hero__badge anim-fade-up" data-delay="0">Disponible para colaborar</span>
-
-      <h1 class="hero__title anim-fade-up" data-delay="1">
-        <span class="hero__title-line">Construyo</span>
-        <span class="hero__title-gradient">experiencias digitales</span>
-      </h1>
-
-      <p class="hero__subtitle anim-fade-up" data-delay="2">
-        <span class="typing" id="typingText">Desarrollador de Software Full Stack en formacion</span>
-      </p>
-
-      <p class="hero__desc anim-fade-up" data-delay="3">
-        
-        Apasionado por crear soluciones web que combinan codigo limpio, diseño moderno y experiencia de usuario excepcional.
-      </p>
-
-      <div class="hero__actions anim-fade-up" data-delay="4">
-        <a href="#proyectos" class="btn btn--primary">
-          <span>Ver proyectos</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#contacto" class="btn btn--outline">Contactarme</a>
-
-      </div>
-
-      <div class="hero__tech anim-fade-up" data-delay="5">
-        <div class="hero__tech-track">
-          <div class="hero__tech-item"><img src="img/html.png" alt="HTML5"><span>HTML5</span></div>
-          <div class="hero__tech-item"><img src="img/css.png" alt="CSS3"><span>CSS3</span></div>
-          <div class="hero__tech-item"><img src="img/js.png" alt="JavaScript"><span>JavaScript</span></div>
-          <div class="hero__tech-item"><img src="img/python.png" alt="Python"><span>Python</span></div>
-          <div class="hero__tech-item"><img src="img/php.png" alt="PHP"><span>PHP</span></div>
-          <div class="hero__tech-item"><img src="img/sql.png" alt="MySQL"><span>MySQL</span></div>
-          <div class="hero__tech-item"><img src="img/github.png" alt="GitHub"><span>GitHub</span></div>
-          <div class="hero__tech-item"><img src="img/csharp.png" alt="C#"><span>C#</span></div>
+  <main>
+    <section class="hero section-pad" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> PORTAFOLIO · 2026</div>
+          <h1>Ideas que toman<br><span>forma en código.</span></h1>
+          <p class="hero-lead">Hola, soy <strong>Andres</strong>. Estudiante de desarrollo de software enfocado en construir productos digitales útiles, interfaces claras y soluciones bien estructuradas.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#proyectos">Explorar proyectos <span>↘</span></a><a class="text-link" href="#contacto">Hablemos <span>↗</span></a></div>
+          <div class="hero-stack"><span>TRABAJO CON</span><div>JavaScript <i>·</i> Python <i>·</i> PHP <i>·</i> SQL <i>·</i> HTML/CSS</div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-frame"><div class="frame-top"><span>PROFILE / 001</span><span>CO — 2026</span></div><img src="img/perfil-andres.png" alt="Retrato de Andres"><div class="frame-bottom"><span>BUILDING & LEARNING</span><span class="frame-symbol">A.</span></div></div>
+          <div class="visual-note"><span class="note-line"></span><span>Curiosidad técnica<br>y mejora continua.</span></div>
+          <div class="visual-index">01<br><span>—</span><br>09</div>
         </div>
       </div>
-    </div>
+      <div class="container hero-bottom"><span>BUCARAMANGA, COLOMBIA</span><a href="#sobre-mi">SCROLL PARA CONOCER MÁS ↓</a></div>
+    </section>
 
-    <a href="#sobre-mi" class="hero__scroll" aria-label="Ir a siguiente seccion">
-      <div class="hero__scroll-mouse">
-        <div class="hero__scroll-wheel"></div>
-      </div>
-    </a>
-  </section>
-
-  <!-- ===== SOBRE MI ===== -->
-  <section class="section" id="sobre-mi">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;sobre-mi /&gt;</span>
-        <h2 class="section__title">Quien soy</h2>
-        <div class="section__line"></div>
-      </div>
-
-      <div class="about">
-        <div class="about__photo anim-reveal">
-          <div class="about__photo-frame">
-            <img src="img/perfil-andres.png" alt="Andres Felipe Forero Sanchez">
-            <div class="about__photo-border"></div>
-          </div>
-        </div>
-
-        <div class="about__content anim-reveal">
-          <p class="about__text">
-            Soy aprendiz de <strong>Analisis y Desarrollo de Software en el SENA CSET de Bucaramanga</strong>,
-            con un enfoque solido en el <strong>desarrollo web full stack</strong>. Mi pasion es construir
-            interfaces que no solo se ven bien, sino que estan bien estructuradas, son funcionales y brindan
-            una experiencia de usuario excepcional.
-          </p>
-          <p class="about__text">
-            Memotivan los retos y las competencias tecnicas como <strong>WorldSkills</strong>, donde he aprendido
-            a trabajar bajo presion, colaborar en equipo y buscar la excelencia en cada proyecto. Cada linea
-            de codigo que escribo es una oportunidad para mejorar y aprender algo nuevo.
-          </p>
-
-          <div class="about__stats">
-            <div class="about__stat anim-reveal">
-              <span class="about__stat-number" data-count="1">0</span>
-              <span class="about__stat-label">Año de formacion</span>
-            </div>
-            <div class="about__stat anim-reveal">
-              <span class="about__stat-number" data-count="10">0</span>
-              <span class="about__stat-label">Proyectos realizados</span>
-            </div>
-            <div class="about__stat anim-reveal">
-              <span class="about__stat-number" data-count="7">0</span>
-              <span class="about__stat-label">Tecnologias</span>
-            </div>
-            <div class="about__stat anim-reveal">
-              <span class="about__stat-number" data-count="2">0</span>
-              <span class="about__stat-label">Competiciones nacionales</span>
-            </div>
-          </div>
+    <section class="about section-pad" id="sobre-mi">
+      <div class="container section-grid">
+        <div class="section-label"><span>01 / PERFIL</span><span class="label-rule"></span></div>
+        <div class="section-content">
+          <p class="kicker">UN POCO SOBRE MÍ</p>
+          <h2>Aprender, construir<br>y <span>resolver.</span></h2>
+          <div class="about-columns"><p>Me interesa el desarrollo de software como una forma de convertir ideas y necesidades reales en herramientas funcionales. Disfruto trabajar tanto en la experiencia de usuario como en la lógica que hace que un producto funcione.</p><p>He participado en espacios de formación y competencias técnicas, incluyendo procesos relacionados con WorldSkills y muestras de proyectos a nivel regional y nacional. Actualmente continúo fortaleciendo mis conocimientos y experiencia.</p></div>
+          <div class="about-facts"><div><strong>01</strong><span>Desarrollo web<br>y aplicaciones</span></div><div><strong>02</strong><span>Backend y<br>gestión de datos</span></div><div><strong>03</strong><span>Análisis y<br>resolución de problemas</span></div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== PROYECTOS ===== -->
-  <section class="section section--alt" id="proyectos">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;proyectos /&gt;</span>
-        <h2 class="section__title">Trabajo reciente</h2>
-        <p class="section__desc">Proyectos que reflejan mi crecimiento como desarrollador</p>
-        <div class="section__line"></div>
+    <section class="projects section-pad" id="proyectos">
+      <div class="container">
+        <div class="section-heading"><div><p class="kicker">02 / TRABAJO SELECCIONADO</p><h2>Proyectos <span>destacados.</span></h2></div><p class="heading-note">Una selección de desarrollos y experimentos que reflejan mi proceso de aprendizaje.</p></div>
+        <div class="projects-grid"><article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/sigirec" target="_blank" rel="noopener noreferrer" aria-label="Ver SiGiRec en GitHub">
+        <img src="img/sigireccc.png" alt="Vista previa de SiGiRec" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Proyecto destacado</span><span class="project-index">/ 01</span></div>
+        <h3>SiGiRec</h3><p>Sistema inteligente de reciclaje que combina visión por computador e IA para identificar materiales y apoyar la gestión de puntos.</p>
+        <div class="tag-list"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">MySQL</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/sigirec" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a><a class="project-link project-link--quiet" href="https://sigirecprueba.whf.bz/index.html" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a></div>
       </div>
-
-      <div class="projects-grid">
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#0ea5e9"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/sigireccc.png" alt="SiGiRec - Sistema inteligente de reciclaje" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/sigirec" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="pcard__overlay-btn" aria-label="Demo en vivo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">♻️</span>
-            </div>
-            <h3 class="pcard__title">SiGiRec</h3>
-            <p class="pcard__desc">Sistema inteligente de gestion de reciclaje con IA. Detecta botellas PET, tapas y etiquetas mediante YOLOv8 y asigna SIGIPUNTOS a los usuarios.</p>
-            <div class="pcard__tech">
-              <span>Python</span><span>Flask</span><span>YOLOv8</span><span>MySQL</span><span>OpenCV</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Proyecto Grado · IA</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/sigirec" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                <a href="https://sigirecprueba.whf.bz/index.html" target="_blank" class="pcard__link-btn" aria-label="Demo en vivo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#f59e0b"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/proyecto2-1.png" alt="Retail Analytics - Pipeline de ciencia de datos" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/practica-analisisdatos-python" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">📊</span>
-            </div>
-            <h3 class="pcard__title">Retail Analytics</h3>
-            <p class="pcard__desc">Pipeline completo de ciencia de datos: generacion de datos sinteticos, limpieza, analisis estadico, visualizacion interactiva y segmentacion de clientes con ML.</p>
-            <div class="pcard__tech">
-              <span>Python</span><span>Pandas</span><span>Plotly</span><span>Scikit-learn</span><span>Matplotlib</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Data Science · ML</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/practica-analisisdatos-python" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#3b82f6"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/proyectoC.png" alt="Aprendiendo BD - Curso de PostgreSQL" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/aprendiendo-bd" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🗄️</span>
-            </div>
-            <h3 class="pcard__title">Aprendiendo BD</h3>
-            <p class="pcard__desc">Curso practico y progresivo de bases de datos con PostgreSQL y Docker. Desde DDL basico hasta CTEs recursivas, triggers y optimizacion con EXPLAIN ANALYZE.</p>
-            <div class="pcard__tech">
-              <span>PostgreSQL</span><span>Docker</span><span>SQL</span><span>PL/pgSQL</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Educacion · Backend</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/aprendiendo-bd" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#ef4444"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/neonletal.png" alt="Neon Letal - Shooter cyberpunk" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/jueganho" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🎮</span>
-            </div>
-            <h3 class="pcard__title">Neon Letal</h3>
-            <p class="pcard__desc">Shooter arcade top-down cyberpunk en el navegador. 10 distritos, 40 armas procedurales, combos, sonidos con Web Audio API y estetica CRT. Cero dependencias.</p>
-            <div class="pcard__tech">
-              <span>HTML5 Canvas</span><span>JavaScript</span><span>Web Audio API</span><span>CSS3</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Game Dev · Frontend</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/jueganho" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#d946ef"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/bandidaje.png" alt="Calculadora de Bandidaje" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/bandidaje.github.io" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="pcard__overlay-btn" aria-label="Demo en vivo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🎲</span>
-            </div>
-            <h3 class="pcard__title">Calculadora de Bandidaje</h3>
-            <p class="pcard__desc">Portal web con dos calculadoras interactivas. Diseno neon con glassmorphism, documentacion plegable y SEO completo con datos estructurados JSON-LD.</p>
-            <div class="pcard__tech">
-              <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>JSON-LD</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Proyecto Personal · Web</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/bandidaje.github.io" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                <a href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" class="pcard__link-btn" aria-label="Demo en vivo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#10b981"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/sintetic.png" alt="Sintetic - Panel de equipos de futbol" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/sintetic" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              <a href="https://dvskked.github.io/sintetic/" target="_blank" class="pcard__overlay-btn" aria-label="Demo en vivo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">⚽</span>
-            </div>
-            <h3 class="pcard__title">Sintetic</h3>
-            <p class="pcard__desc">Panel de gestion de equipos de futbol. Control de jugadores, pagos, busqueda en tiempo real, estadisticas y exportacion/importacion JSON con persistencia local.</p>
-            <div class="pcard__tech">
-              <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>localStorage</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Proyecto Personal · Web</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/sintetic" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                <a href="https://dvskked.github.io/sintetic/" target="_blank" class="pcard__link-btn" aria-label="Demo en vivo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#8b5cf6"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/proyectophp.png" alt="InventoryFlow - Sistema de inventarios" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/inventory-system" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">📦</span>
-            </div>
-            <h3 class="pcard__title">InventoryFlow</h3>
-            <p class="pcard__desc">Sistema completo de gestion de inventarios y ventas con arquitectura MVC, POS, reportes, autenticacion bcrypt, CSRF y tests PHPUnit.</p>
-            <div class="pcard__tech">
-              <span>PHP 8.1</span><span>MySQL</span><span>MVC</span><span>PHPUnit</span><span>Composer</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Backend · Full Stack</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/inventory-system" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#06b6d4"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/petcare.png" alt="PetCare Pro - Sistema de cuidado de mascotas" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/petcarebro" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🐾</span>
-            </div>
-            <h3 class="pcard__title">PetCare Pro</h3>
-            <p class="pcard__desc">Sistema de gestion y cuidado de mascotas con dashboard, paseos, alimentacion, veterinaria, calendario y score de salud. Glassmorphism + 17 animaciones CSS.</p>
-            <div class="pcard__tech">
-              <span>JavaScript</span><span>CSS3</span><span>HTML5</span><span>localStorage</span><span>Font Awesome</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Frontend · App Web</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/petcarebro" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#f59e0b"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/devforge.png" alt="DevForge - Plataforma multi-lenguaje" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/devforge" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🔥</span>
-            </div>
-            <h3 class="pcard__title">DevForge</h3>
-            <p class="pcard__desc">Plataforma multi-lenguaje de productividad para desarrolladores. APIs REST en Python, Node.js y PHP, CLI en Go, dashboard en tiempo real y Docker.</p>
-            <div class="pcard__tech">
-              <span>Python</span><span>Node.js</span><span>PHP</span><span>Go</span><span>Docker</span><span>FastAPI</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">Full Stack · Microservicios</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/devforge" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="pcard anim-reveal" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
-          <div class="pcard__glow" style="--pcard-accent:#a78bfa"></div>
-          <div class="pcard__img-wrap">
-            <img src="img/focus.png" alt="FocusFlow - App Pomodoro PWA" class="pcard__img" loading="lazy">
-            <div class="pcard__img-overlay">
-              <a href="https://github.com/Dvskked/focusflow" target="_blank" class="pcard__overlay-btn" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <div class="pcard__body">
-            <div class="pcard__head">
-              <span class="pcard__icon">🧠</span>
-            </div>
-            <h3 class="pcard__title">FocusFlow</h3>
-            <p class="pcard__desc">Mini app Pomodoro + lista de tareas con persistencia en localStorage, PWA offline, accesibilidad y atajos de teclado. Productividad sin distracciones.</p>
-            <div class="pcard__tech">
-              <span>JavaScript</span><span>PWA</span><span>Service Worker</span><span>CSS3</span>
-            </div>
-            <div class="pcard__footer">
-              <span class="pcard__cat">PWA · Productividad</span>
-              <div class="pcard__links">
-                <a href="https://github.com/Dvskked/focusflow" target="_blank" class="pcard__link-btn" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </article>
-
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/practica-analisisdatos-python" target="_blank" rel="noopener noreferrer" aria-label="Ver Retail Analytics en GitHub">
+        <img src="img/proyecto2-1.png" alt="Vista previa de Retail Analytics" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Data & Analytics</span><span class="project-index">/ 02</span></div>
+        <h3>Retail Analytics</h3><p>Flujo de análisis de datos: preparación, exploración, visualización y segmentación de clientes con técnicas de machine learning.</p>
+        <div class="tag-list"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/practica-analisisdatos-python" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== ESTUDIOS ===== -->
-  <section class="section" id="estudios">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;estudios /&gt;</span>
-        <h2 class="section__title">Formacion academica</h2>
-        <div class="section__line"></div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/aprendiendo-bd" target="_blank" rel="noopener noreferrer" aria-label="Ver Aprendiendo BD en GitHub">
+        <img src="img/proyectoC.png" alt="Vista previa de Aprendiendo BD" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Backend & datos</span><span class="project-index">/ 03</span></div>
+        <h3>Aprendiendo BD</h3><p>Repositorio de aprendizaje práctico de SQL y PostgreSQL, desde consultas fundamentales hasta funciones, triggers y optimización.</p>
+        <div class="tag-list"><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">PL/pgSQL</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/aprendiendo-bd" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
       </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/jueganho" target="_blank" rel="noopener noreferrer" aria-label="Ver Neon Letal en GitHub">
+        <img src="img/neonletal.png" alt="Vista previa de Neon Letal" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Game development</span><span class="project-index">/ 04</span></div>
+        <h3>Neon Letal</h3><p>Shooter arcade top-down para navegador, con escenarios, mecánicas de juego y efectos desarrollados con APIs web nativas.</p>
+        <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">Canvas</span><span class="tag">Web Audio API</span><span class="tag">CSS</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/jueganho" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/bandidaje.github.io" target="_blank" rel="noopener noreferrer" aria-label="Ver Calculadora de Bandidaje en GitHub">
+        <img src="img/bandidaje.png" alt="Vista previa de Calculadora de Bandidaje" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Frontend</span><span class="project-index">/ 05</span></div>
+        <h3>Calculadora de Bandidaje</h3><p>Aplicación web con calculadoras interactivas, documentación integrada y una interfaz visual personalizada.</p>
+        <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JSON-LD</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/bandidaje.github.io" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a><a class="project-link project-link--quiet" href="https://dvskked.github.io/bandidaje.github.io/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/sintetic" target="_blank" rel="noopener noreferrer" aria-label="Ver Sintetic en GitHub">
+        <img src="img/sintetic.png" alt="Vista previa de Sintetic" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Aplicación web</span><span class="project-index">/ 06</span></div>
+        <h3>Sintetic</h3><p>Panel para administrar equipos de fútbol, jugadores, pagos y estadísticas, con búsqueda y persistencia de información.</p>
+        <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">localStorage</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/sintetic" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a><a class="project-link project-link--quiet" href="https://dvskked.github.io/sintetic/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/inventory-system" target="_blank" rel="noopener noreferrer" aria-label="Ver InventoryFlow en GitHub">
+        <img src="img/proyectophp.png" alt="Vista previa de InventoryFlow" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Full stack</span><span class="project-index">/ 07</span></div>
+        <h3>InventoryFlow</h3><p>Sistema de inventario y ventas con estructura MVC, punto de venta, reportes y controles de seguridad.</p>
+        <div class="tag-list"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">MVC</span><span class="tag">PHPUnit</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/inventory-system" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/petcarebro" target="_blank" rel="noopener noreferrer" aria-label="Ver PetCare Pro en GitHub">
+        <img src="img/petcare.png" alt="Vista previa de PetCare Pro" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Aplicación web</span><span class="project-index">/ 08</span></div>
+        <h3>PetCare Pro</h3><p>Aplicación de gestión para el cuidado de mascotas, con módulos de seguimiento, calendario y organización de actividades.</p>
+        <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/petcarebro" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <a class="project-image" href="https://github.com/Dvskked/devforge" target="_blank" rel="noopener noreferrer" aria-label="Ver DevForge en GitHub">
+        <img src="img/devforge.png" alt="Vista previa de DevForge" loading="lazy">
+        <span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body">
+        <div class="project-meta"><span>Herramientas dev</span><span class="project-index">/ 09</span></div>
+        <h3>DevForge</h3><p>Plataforma de productividad para desarrollo con servicios y herramientas construidas en distintos lenguajes.</p>
+        <div class="tag-list"><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">Go</span><span class="tag">Docker</span></div>
+        <div class="project-actions"><a class="project-link" href="https://github.com/Dvskked/devforge" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article></div>
+      </div>
+    </section>
 
-      <div class="studies">
-        <div class="study-card anim-reveal">
-          <div class="study-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    <section class="formation section-pad" id="formacion">
+      <div class="container section-grid">
+        <div class="section-label"><span>03 / FORMACIÓN</span><span class="label-rule"></span></div>
+        <div class="section-content">
+          <p class="kicker">FORMACIÓN Y EXPERIENCIA</p><h2>Conocimiento en<br><span>construcción.</span></h2>
+          <div class="timeline">
+            <article class="timeline-item"><span class="timeline-date">ACTUALIDAD</span><div><h3>Universidad de Investigación y Desarrollo (UDI)</h3><p>Estudiante universitario. Formación continua en fundamentos y prácticas de desarrollo de software.</p><span class="timeline-status">En curso</span></div></article>
+            <article class="timeline-item"><span class="timeline-date">ETAPA PREVIA</span><div><h3>SENA — Análisis y Desarrollo de Software</h3><p>Experiencia formativa como aprendiz, con bases en programación, lógica, desarrollo web y construcción de soluciones. El proceso no fue culminado.</p><span class="timeline-status">Formación previa</span></div></article>
+            <article class="timeline-item"><span class="timeline-date">PARTICIPACIÓN</span><div><h3>WorldSkills y muestras de proyectos</h3><p>Participación en espacios y competencias técnicas regionales y nacionales, con exposiciones de proyectos en Santander y Pereira.</p><span class="timeline-status">Experiencia formativa</span></div></article>
           </div>
-          <div class="study-card__badge">En formacion</div>
-          <h3 class="study-card__title">Analisis y Desarrollo de Software</h3>
-          <p class="study-card__institution">SENA - Servicio Nacional de Aprendizaje</p>
-          <p class="study-card__desc">
-            Adquiriendo bases solidas en programacion, desarrollo web y logica computacional,
-            construyendo soluciones orientadas a proyectos reales.
-          </p>
-          <ul class="study-card__skills">
-            <li>Web (HTML, CSS, JS)</li>
-            <li>Backend (PHP, MySQL)</li>
-            <li>Logica y Algoritmia</li>
-          </ul>
-        </div>
-
-        <div class="study-card anim-reveal">
-          <div class="study-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
-          </div>
-          <div class="study-card__badge study-card__badge--purple">Robotica</div>
-          <h3 class="study-card__title">Robotica Educativa</h3>
-          <p class="study-card__institution">LEGO Education</p>
-          <p class="study-card__desc">
-            Resolucion de retos tecnicos mediante logica y creatividad. Fortalecimiento de
-            habilidades de analisis y pensamiento estructurado.
-          </p>
-        </div>
-
-        <div class="study-card anim-reveal">
-          <div class="study-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          </div>
-          <div class="study-card__badge study-card__badge--cyan">Competencia</div>
-          <h3 class="study-card__title">Formacion por Competencias</h3>
-          <p class="study-card__institution">WorldSkills / Procesos Competitivos</p>
-          <p class="study-card__desc">
-            Disciplina y alto rendimiento tecnico en espacios de exposicion nacional,
-            enfocados en la atencion al detalle y manejo del tiempo.
-          </p>
+          <div class="learning"><span class="kicker">APRENDIZAJE TÉCNICO</span><p>HTML · CSS · JavaScript · TypeScript · PHP · Python · PostgreSQL · análisis de datos</p></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== LOGROS ===== -->
-  <section class="section section--alt" id="logros">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;logros /&gt;</span>
-        <h2 class="section__title">Certificaciones y logros</h2>
-        <p class="section__desc">
-          Durante mi formacion he obtenido certificaciones y participado en eventos que reflejan
-          mi crecimiento profesional y compromiso con la excelencia.
-        </p>
-        <div class="section__line"></div>
-      </div>
+    <section class="toolkit section-pad">
+      <div class="container toolkit-inner"><div><p class="kicker">04 / TECNOLOGÍAS</p><h2>Herramientas para<br><span>crear soluciones.</span></h2></div><div class="toolkit-list"><div><span>FRONTEND</span><p>HTML5 <b>·</b> CSS3 <b>·</b> JavaScript <b>·</b> TypeScript</p></div><div><span>BACKEND</span><p>Python <b>·</b> PHP <b>·</b> Node.js</p></div><div><span>DATOS</span><p>MySQL <b>·</b> PostgreSQL <b>·</b> Pandas</p></div><div><span>HERRAMIENTAS</span><p>Git <b>·</b> Docker <b>·</b> Electron</p></div></div></div>
+    </section>
 
-      <div class="achievements">
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-          </div>
-          <h3 class="achievement__title">Certificado en Medios Audiovisuales</h3>
-          <p class="achievement__desc">Formacion enfocada en produccion audiovisual, edicion y comunicacion digital.</p>
-          <button class="achievement__btn btn-certificado" data-file="Certificado Andres Forero cine.pdf">Descargar certificado</button>
-        </div>
+    <section class="contact section-pad" id="contacto">
+      <div class="container contact-inner"><div><p class="kicker">05 / CONTACTO</p><h2>¿Tienes una idea<br>en <span>mente?</span></h2><p class="contact-copy">Estoy abierto a conversar sobre proyectos, colaboración y oportunidades para seguir creciendo.</p></div><div class="contact-card"><span class="contact-label">ESCRÍBEME</span><a class="email-link" href="mailto:siriusplanet76@gmail.com">siriusplanet76@gmail.com <span>↗</span></a><div class="contact-divider"></div><span class="contact-label">ENCUÉNTRAME EN</span><a class="social-link" href="https://github.com/Dvskked" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><span class="contact-location">Bucaramanga, Colombia</span></div></div>
+    </section>
+  </main>
 
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3 class="achievement__title">Certificacion en Python</h3>
-          <p class="achievement__desc">Fundamentos de programacion, logica, estructuras de datos y resolucion de problemas.</p>
-          <button class="achievement__btn btn-certificado" data-file="certificado-python.png">Descargar certificado</button>
-        </div>
-
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          </div>
-          <h3 class="achievement__title">Participacion en WorldSkills</h3>
-          <p class="achievement__desc">Competencia tecnica enfocada en desarrollo web, diseno y buenas practicas.</p>
-          <button class="achievement__btn btn-certificado" data-file="certificado Andres Forero ws.pdf">Descargar certificado</button>
-        </div>
-
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <h3 class="achievement__title">1er Encuentro Semilleros de Investigacion</h3>
-          <p class="achievement__desc">Participacion nacional presentando proyectos y procesos formativos.</p>
-          <button class="achievement__btn btn-certificado" data-file="Certificado Andres Forero pereira.pdf">Descargar certificado</button>
-        </div>
-
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <h3 class="achievement__title">2do Encuentro Semilleros Regional</h3>
-          <p class="achievement__desc">Participacion en eventos academicos presentando proyectos formativos.</p>
-          <button class="achievement__btn btn-certificado" data-file="AndresForero-certificado-encuentrosemillerosII.pdf">Descargar certificado</button>
-        </div>
-
-        <div class="achievement anim-reveal">
-          <div class="achievement__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-          </div>
-          <h3 class="achievement__title">Estructuracion de Proyectos de Investigacion</h3>
-          <p class="achievement__desc">Curso de investigacion certificado.</p>
-          <button class="achievement__btn btn-certificado" data-file="9309003416897CC1099741266C.pdf">Descargar certificado</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS ===== -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;skills /&gt;</span>
-        <h2 class="section__title">Nivel de habilidades</h2>
-        <div class="section__line"></div>
-      </div>
-
-      <div class="skills">
-        <div class="skills__bars">
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>HTML5</span><span>80%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="80"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>CSS3</span><span>70%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="70"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>JavaScript</span><span>40%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="40"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>Python</span><span>40%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="40"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>PHP</span><span>50%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="50"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>MySQL</span><span>70%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="70"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>GitHub</span><span>80%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="80"></div></div>
-          </div>
-          <div class="skill anim-reveal">
-            <div class="skill__header"><span>C#</span><span>5%</span></div>
-            <div class="skill__bar"><div class="skill__fill" data-width="5"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MI PROMESA / VISION FUTURA ===== -->
-  <section class="section section--alt" id="promesa">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;vision /&gt;</span>
-        <h2 class="section__title">Mi promesa al mundo del codigo</h2>
-        <div class="section__line"></div>
-      </div>
-
-      <div class="promise anim-reveal">
-        <div class="promise__card">
-          <div class="promise__quote">"</div>
-          <p class="promise__text">
-            No solo quiero aprender a programar. Quiero construir soluciones que importen.
-            Cada dia me desafio a ser mejor que ayer, a escribir codigo mas limpio,
-            a pensar en el usuario final y a nunca dejar de aprender.
-          </p>
-          <p class="promise__text">
-            Mi meta no es solo dominar tecnologias, sino <strong>crear productos que la gente quiera usar</strong>,
-            que resuelvan problemas reales y que dejen una huella positiva. Creo firmemente que el codigo
-            es el lenguaje mas poderoso para cambiar el mundo.
-          </p>
-
-          <div class="promise__goals">
-            <div class="promise__goal">
-              <div class="promise__goal-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-              <h4>Full Stack Developer</h4>
-              <p>Domina el frontend y el backend para crear soluciones completas de principio a fin.</p>
-            </div>
-            <div class="promise__goal">
-              <div class="promise__goal-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <h4>Senior en 3 años</h4>
-              <p>Mi hoja de ruta: aprender, practicar, construir, enseñar y crecer cada dia sin descanso.</p>
-            </div>
-            <div class="promise__goal">
-              <div class="promise__goal-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <h4>Impactar comunidades</h4>
-              <p>Usar la tecnologia para resolver problemas reales en mi comunidad y en Latinoamerica.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACTO ===== -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <div class="section__header anim-reveal">
-        <span class="section__tag">&lt;contacto /&gt;</span>
-        <h2 class="section__title">Hablemos</h2>
-        <p class="section__desc">Siempre abierto a nuevas oportunidades y colaboraciones</p>
-        <div class="section__line"></div>
-      </div>
-
-      <div class="contact">
-        <div class="contact__info anim-reveal">
-          <div class="contact__card">
-            <h3 class="contact__name">Andres Felipe Forero Sanchez</h3>
-            <p class="contact__role">Desarrollador de Software en formacion</p>
-
-            <div class="contact__details">
-              <div class="contact__detail">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Bucaramanga, Colombia</span>
-              </div>
-              <div class="contact__detail">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:siriusplanet76@gmail.com">siriusplanet76@gmail.com</a>
-              </div>
-              <div class="contact__detail">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <a href="https://github.com/Dvskked" target="_blank">github.com/Dvskked</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact__form anim-reveal">
-          <form id="portfolioContactForm">
-            <div class="form-group">
-              <input type="text" id="nombre" placeholder=" " required>
-              <label for="nombre">Nombre completo</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder=" " required>
-              <label for="email">Correo electronico</label>
-            </div>
-            <div class="form-group">
-              <textarea id="mensaje" rows="5" placeholder=" " required></textarea>
-              <label for="mensaje">Tu mensaje</label>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full" id="btnEnviar">
-              <span>Enviar mensaje</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-          </form>
-          <div id="formStatus" class="form-status hidden"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">&copy; 2026 Andres Felipe Forero Sanchez. Todos los derechos reservados.</p>
-        <p class="footer__built">Construido con dedicacion y mucho xoffee.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <footer class="footer"><div class="container footer-inner"><a class="footer-brand" href="#inicio">A<span>.</span></a><span>Diseñado y desarrollado por Andres.</span><span>© 2026 · TODOS LOS DERECHOS RESERVADOS</span></div></footer>
   <script src="js/script.js"></script>
-  <script src="js/certificado.js"></script>
 </body>
 </html>
