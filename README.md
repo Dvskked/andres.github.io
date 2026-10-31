@@ -1,4 +1,4 @@
-# Portafolio - Andres Felipe Forero Sanchez
+# Portafolio - Andres
 
 > Desarrollador de Software en formacion | SENA CSET Bucaramanga
 
@@ -74,7 +74,7 @@ php -S localhost:8000
 
 ## Autor
 
-**Andres Felipe Forero Sanchez**
+**Andres**
 - GitHub: [Dvskked](https://github.com/Dvskked)
 - Email: siriusplanet76@gmail.com
 - Ubicacion: Bucaramanga, Colombia
